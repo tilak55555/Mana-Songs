@@ -133,7 +133,8 @@ function loadTrack(index, autoplay) {
   
   currentIndex = (index + songs.length) % songs.length;
   const song = songs[currentIndex];
-  audioEl.src = song.audio_url;
+  // Encode URL so GitHub Pages can load files with spaces
+  audioEl.src = encodeURI(song.audio_url);
   audioEl.load();
 
   nowTitle.textContent = song.title;
