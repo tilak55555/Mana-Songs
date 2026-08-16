@@ -68,43 +68,33 @@ tabs.forEach((tab) => {
 
 
 // ---------- Load songs ----------
-// LOCAL JSON FIRST
-// Supabase only used if local JSON has no songs
+// SUPABASE FIRST
+// Local JSON used only as fallback if Supabase fails or is empty
 async function loadSongs(cat) {
+  let rawSongs = [];
 
-  let rawSongs = await loadFallback(cat);
-
-  // If local JSON has no songs,
-  // try Supabase
-  if (!rawSongs.length && sbClient) {
-
+  if (sbClient) {
     try {
-
       const { data, error } = await sbClient
         .from("songs")
         .select("*")
         .eq("category", cat)
-        .order("sort_order", {
-          ascending: true
-        });
+        .order("sort_order", { ascending: true });
 
       if (error) {
         throw error;
       }
-
       rawSongs = data || [];
-
     } catch (e) {
-
-      console.warn(
-        "Supabase fetch failed:",
-        e
-      );
-
+      console.warn("Supabase fetch failed:", e);
       rawSongs = [];
     }
   }
 
+  // Fallback if Supabase is completely empty
+  if (!rawSongs.length) {
+    rawSongs = await loadFallback(cat);
+  }
 
   // Remove duplicate songs
   const seen = new Set();
