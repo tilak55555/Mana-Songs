@@ -98,7 +98,7 @@ async function loadSongs(cat) {
 
 async function loadFallback(cat) {
   try {
-    const res = await fetch("song-catalogue.json");
+    const res = await fetch("song-catalogue.json?v=" + new Date().getTime());
     const json = await res.json();
     return json[cat] || [];
   } catch {
