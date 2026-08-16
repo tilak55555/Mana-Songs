@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080a10" />
+  <title>తెలుగు మాస్</title>
+  <link rel="stylesheet" href="style.css?v=5" />
+</head>
+
+<body>
+  <main class="page">
+
+    <!-- Background scenes, one per playlist category -->
+    <section class="stage" id="stage" data-playlist="chill">
+      <div class="scene scene-chill active" data-scene="chill"></div>
+      <div class="scene scene-gym" data-scene="gym"></div>
+      <div class="scene scene-romance" data-scene="romance"></div>
+      <div class="scene scene-dance" data-scene="dance"></div>
+      <div class="scene scene-breakup" data-scene="breakup"></div>
+      <div class="scene scene-god" data-scene="god"></div>
+
+      <header class="top">
+        <div class="brand">
+          <span class="logo">తెలుగు మాస్</span>
+          <span class="by">By: <a href="#" target="_blank" rel="noopener">Tilakchowdary.work</a></span>
+        </div>
+
+        <div class="top-right">
+          <span class="listener-pill">
+            <span class="dot"></span>
+            <span id="listenerCount">1</span> listener live
+          </span>
+
+          <nav class="tabs" id="tabs">
+            <button class="tab active" data-cat="chill">Chill</button>
+            <button class="tab" data-cat="gym">Gym</button>
+            <button class="tab" data-cat="romance">Romance</button>
+            <button class="tab" data-cat="dance">Dance</button>
+            <button class="tab" data-cat="breakup">Breakup</button>
+            <button class="tab" data-cat="god">God</button>
+          </nav>
+        </div>
+      </header>
+
+      <div class="kicker">
+        <h1 id="heading">చిల్ వైబ్స్</h1>
+      </div>
+
+      <!-- Player -->
+      <section class="player glass" id="player">
+        <div class="player-row">
+          <div class="now-playing">
+            <b id="nowTitle">Loading…</b>
+            <span id="nowArtist"></span>
+          </div>
+          <div class="player-actions">
+            <button id="songsBtn" class="pill-btn">☰ Songs</button>
+            <button id="expandBtn" class="icon-btn" title="Close">✕</button>
+          </div>
+        </div>
+
+        <div class="seek-row">
+          <input type="range" id="seek" min="0" max="100" value="0" step="0.1" />
+          <span id="time">0:00 / 0:00</span>
+        </div>
+
+        <div class="controls-row">
+          <button id="prevBtn" class="ctrl-btn">◀</button>
+          <button id="playBtn" class="ctrl-btn play">▶</button>
+          <button id="nextBtn" class="ctrl-btn">▶</button>
+        </div>
+      </section>
+
+      <!-- Song list sidebar -->
+      <aside class="song-menu glass" id="songMenu" hidden aria-label="Choose a song">
+        <div class="song-menu-head">
+          <b>Songs</b>
+          <button id="closeSongs" class="icon-btn">✕</button>
+        </div>
+        <ul id="songList"></ul>
+      </aside>
+    </section>
+  </main>
+
+  <audio id="audioEl" preload="metadata"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js?v=2"></script>
+  <script src="assets/oneko.js" data-cat="assets/oneko.gif"></script>
+</body>
+
+</html>
