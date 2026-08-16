@@ -107,15 +107,27 @@ function loadTrack(index, autoplay) {
     nowArtist.textContent = "";
     return;
   }
+  
+  audioEl.pause();
+  
   currentIndex = (index + songs.length) % songs.length;
   const song = songs[currentIndex];
   audioEl.src = song.audio_url;
+  audioEl.load();
+
   nowTitle.textContent = song.title;
   nowArtist.textContent = (song.artist && song.artist.toLowerCase() !== "unknown") ? song.artist : "";
   renderSongList();
 
   if (autoplay) {
-    audioEl.play();
+    const playPromise = audioEl.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(e => {
+        console.warn("Autoplay prevented:", e);
+        isPlaying = false;
+        playBtn.textContent = "▶";
+      });
+    }
     isPlaying = true;
     playBtn.textContent = "❚❚";
   } else {
