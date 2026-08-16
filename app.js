@@ -236,6 +236,12 @@ function loadTrack(index, autoplay) {
 
   if (!songs.length) {
 
+    audioEl.pause();
+    audioEl.removeAttribute('src');
+    audioEl.load();
+    isPlaying = false;
+    playBtn.textContent = "▶";
+
     nowTitle.textContent =
       "No songs yet";
 
