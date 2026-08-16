@@ -1,49 +1,122 @@
 {
   "chill": [
     {
-      "title": "Basinga Balaalu",
+      "title": "Be Free",
       "artist": "",
-      "audio_url": "assets/audio/tractor-1.mp3"
+      "audio_url": "assets/audio/chill/Be Free.mp3"
     },
     {
-      "title": "Village Vibes",
+      "title": "Daripontothundu",
       "artist": "",
-      "audio_url": "assets/audio/tractor-2.mp3"
-    }
-  ],
-  "gym": [
+      "audio_url": "assets/audio/chill/Daripontothundu.mp3"
+    },
     {
-      "title": "Pump It Up",
+      "title": "Dole Dole",
       "artist": "",
-      "audio_url": "assets/audio/gym-1.mp3"
+      "audio_url": "assets/audio/chill/Dole Dole.mp3"
+    },
+    {
+      "title": "Hoyna Hoyna",
+      "artist": "",
+      "audio_url": "assets/audio/chill/Hoyna Hoyna.mp3"
+    },
+    {
+      "title": "JIMPAK CHIPAK",
+      "artist": "",
+      "audio_url": "assets/audio/chill/JIMPAK CHIPAK.mp3"
+    },
+    {
+      "title": "Maya",
+      "artist": "",
+      "audio_url": "assets/audio/chill/Maya.mp3"
+    },
+    {
+      "title": "Psycho Saiyaan",
+      "artist": "",
+      "audio_url": "assets/audio/chill/Psycho Saiyaan.mp3"
+    },
+    {
+      "title": "The Karma",
+      "artist": "",
+      "audio_url": "assets/audio/chill/The Karma.mp3"
+    },
+    {
+      "title": "Unnatundi Gundey",
+      "artist": "",
+      "audio_url": "assets/audio/chill/Unnatundi Gundey.mp3"
+    },
+    {
+      "title": "Why This Kolaveri",
+      "artist": "",
+      "audio_url": "assets/audio/chill/Why This Kolaveri.mp3"
     }
   ],
   "romance": [
     {
-      "title": "Old Gold Hit",
+      "title": "Arerey Manasa",
       "artist": "",
-      "audio_url": "assets/audio/90s-1.mp3"
+      "audio_url": "assets/audio/romance/Arerey Manasa.mp3"
+    },
+    {
+      "title": "Chustu Chustune Rojulu Gadiche",
+      "artist": "",
+      "audio_url": "assets/audio/romance/Chustu Chustune Rojulu Gadiche.mp3"
+    },
+    {
+      "title": "Padhe Padhe",
+      "artist": "",
+      "audio_url": "assets/audio/romance/Padhe Padhe.mp3"
+    },
+    {
+      "title": "Prema Velluva",
+      "artist": "",
+      "audio_url": "assets/audio/romance/Prema Velluva.mp3"
+    },
+    {
+      "title": "Undiporaadhey",
+      "artist": "",
+      "audio_url": "assets/audio/romance/Undiporaadhey.mp3"
     }
   ],
   "dance": [
     {
-      "title": "BOB Anthem",
+      "title": "Guru_ Jingidi",
       "artist": "",
-      "audio_url": "assets/audio/bob-1.mp3"
-    }
-  ],
-  "breakup": [
-    {
-      "title": "Blue Hour Drive",
-      "artist": "",
-      "audio_url": "assets/audio/ride-1.mp3"
+      "audio_url": "assets/audio/dance/Guru_ Jingidi.mp3"
     }
   ],
   "god": [
     {
-      "title": "Devotional Vibes",
+      "title": "Om Namo Bhagavate Vasudevaya",
       "artist": "",
-      "audio_url": ""
+      "audio_url": "assets/audio/god/Om Namo Bhagavate Vasudevaya.mp3"
+    },
+    {
+      "title": "Rayini Maatram",
+      "artist": "",
+      "audio_url": "assets/audio/god/Rayini Maatram.mp3"
+    },
+    {
+      "title": "Sada Siva Khaaleja",
+      "artist": "",
+      "audio_url": "assets/audio/god/Sada Siva Khaaleja.mp3"
+    },
+    {
+      "title": "Sri Anjaneyam",
+      "artist": "",
+      "audio_url": "assets/audio/god/Sri Anjaneyam.mp3"
+    },
+    {
+      "title": "Suddha Brahma",
+      "artist": "",
+      "audio_url": "assets/audio/god/Suddha Brahma.mp3"
+    }
+  ],
+  "breakup": [
+    {
+      "title": "Ninnu Kori",
+      "artist": "",
+      "audio_url": "assets/audio/sad/Ninnu Kori.mp3"
     }
   ]
 }
