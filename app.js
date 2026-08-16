@@ -61,13 +61,34 @@ async function loadSongs(cat) {
         .order("sort_order", { ascending: true });
 
       if (error) throw error;
-      songs = data && data.length ? data : await loadFallback(cat);
+      let rawSongs = data && data.length ? data : await loadFallback(cat);
+      
+      // Filter duplicates (in case user accidentally inserted same song twice in Supabase)
+      const seen = new Set();
+      songs = rawSongs.filter(s => {
+        if (seen.has(s.audio_url)) return false;
+        seen.add(s.audio_url);
+        return true;
+      });
+      
     } catch (e) {
       console.warn("Supabase fetch failed, using local song-catalogue.json", e);
-      songs = await loadFallback(cat);
+      let rawSongs = await loadFallback(cat);
+      const seen = new Set();
+      songs = rawSongs.filter(s => {
+        if (seen.has(s.audio_url)) return false;
+        seen.add(s.audio_url);
+        return true;
+      });
     }
   } else {
-    songs = await loadFallback(cat);
+    let rawSongs = await loadFallback(cat);
+    const seen = new Set();
+    songs = rawSongs.filter(s => {
+      if (seen.has(s.audio_url)) return false;
+      seen.add(s.audio_url);
+      return true;
+    });
   }
 
   currentIndex = 0;
