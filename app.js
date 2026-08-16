@@ -253,9 +253,9 @@ function loadTrack(index, autoplay) {
     songs[currentIndex];
 
 
-  // Load audio file
+  // Load audio file (safely encode without double-encoding)
   audioEl.src =
-    encodeURI(song.audio_url);
+    encodeURI(decodeURI(song.audio_url));
 
 
   audioEl.load();
